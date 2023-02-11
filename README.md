@@ -10,15 +10,12 @@ For more information, visit https://www.opsmx.com
 
 ### Prerequisites
 
-- Kubernetes cluster 1.20 or later with at least 4 cores and 16 GB memory
+- Kubernetes cluster 1.20 or later with at least 4 cores and 16 GB memory, with nginx ingress
+- Apbility to create TLS certificates (or install cert-manager)
+- Access to create DNS records to map the application URLs to the ingress Loadbalancer IP. 
 - Helm 3 is setup on the client system with 3.10.3 or later
-- Ensure that this URLs(ISD,KeyCloak,Argo CD,Argo Rollouts,Vela) is reachable from your browser. Either DNS name server record must exist or "hosts" file must be updated.
-- Please use below steps:
-
-  	The IP address is the “ingress-nginx-controller” service external IP map them to the hostnames you defined for URLs
-
-	```console
-	Ip-address ISD.REPLACE.THIS.WITH.YOURCOMPANY.COM
+- The application requires a minimum of 3 URLs. Identify and create DNS name records as required.
+- 	Ip-address ISD.REPLACE.THIS.WITH.YOURCOMPANY.COM
 
 	Ip-address KEYCLOAK.REPLACE.THIS.WITH.YOURCOMPANY.COM
 
